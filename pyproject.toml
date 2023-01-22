@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "smaregi-priceconverter"
+version = "0.1.0"
+description = ""
+authors = ["v3vapp <v3v.app@gmail.com>"]
+readme = "README.md"
+packages = [{include = "smaregi_priceconverter"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^1.5.2"
+fastapi = "^0.89.1"
+pydantic = "^1.10.4"
+uvicorn = "^0.20.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
