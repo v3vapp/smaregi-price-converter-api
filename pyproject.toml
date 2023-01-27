@@ -9,12 +9,9 @@ packages = [{include = "smaregi_priceconverter"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 pandas = "^1.5.2"
-<<<<<<< HEAD
-=======
 fastapi = "^0.89.1"
 pydantic = "^1.10.4"
 uvicorn = "^0.20.0"
->>>>>>> origin/dev
 
 
 [build-system]
