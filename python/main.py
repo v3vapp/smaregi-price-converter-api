@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from pydantic import BaseModel  # リクエストbodyを定義するために必要
 from typing import List  # ネストされたBodyを定義するために必要
 import pandas as pd
-from pathlib import Path
 import os, asyncio
 import config
 app = FastAPI()
@@ -12,17 +11,16 @@ class Data(BaseModel):
     test: int
     name: str
 
-@app.get("/")
-def home():
-    return {"test"}
+# @app.get("/")
+# def home():
+#     return {"test"}
 
 # シンプルなJSON Bodyの受け取り
-@app.post("/user/")
+@app.post("/upload/")
 # 上で定義したUserモデルのリクエストbodyをuserで受け取る
 # user = {"user_id": 1, "name": "太郎"}
 async def create_user(user: Data):
 
-    
     df_old = pd.read_csv(f'{config.root}/data/old_price_data.csv')
     df_new = pd.read_csv(f'{config.root}/data/new_price_data.csv')
 

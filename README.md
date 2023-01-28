@@ -1,4 +1,4 @@
 ```
 # Run API server
-python -m uvicorn pyhton.main:app --reload    
+python -m uvicorn python.main:app --reload    
 ```
